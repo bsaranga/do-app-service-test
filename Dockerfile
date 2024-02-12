@@ -7,7 +7,6 @@ FROM node:${NODE_VERSION}-alpine
 # Use production node environment by default.
 ENV NODE_ENV production
 
-
 WORKDIR /usr/src/app
 
 # Download dependencies as a separate step to take advantage of Docker's caching.
@@ -23,8 +22,6 @@ USER node
 
 # Copy the rest of the source files into the image.
 COPY . .
-
-RUN chmod 666 /usr/src/app/db/store.db
 
 # Expose the port that the application listens on.
 EXPOSE 3000
