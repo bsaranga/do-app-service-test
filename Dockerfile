@@ -18,7 +18,7 @@ COPY package*.json ./
 RUN npm install
 
 # Run the application as a non-root user.
-USER node
+USER root
 
 # Copy the rest of the source files into the image.
 COPY . .
