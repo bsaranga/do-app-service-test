@@ -568,6 +568,10 @@ video {
   bottom: 7rem;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -626,6 +630,10 @@ video {
 
 .w-\[70\%\] {
   width: 70%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-col {

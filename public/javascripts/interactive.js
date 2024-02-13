@@ -4,6 +4,7 @@ const msgBox = document.getElementById('msg');
 
 let defaultScale = 1.0;
 let defaultTranslate = 1;
+
 let index = 0;
 
 const messages = [
