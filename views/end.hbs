@@ -1,0 +1,42 @@
+<div class="flex flex-col items-center gap-4">
+    <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" alt="">
+    <div>💖🥰😍💓🥰💓😍🥰💖😍🥰💓🥰😍🥰💖😍💓💖</div>
+    <div class="text-3xl">YYYYYYYEEEEEEEEESSSSSSSSSSSSSSSS!!!!</div>
+    <img class="rounded-md"
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHl0NWRlcGVnMHhjOHd0bHozenJ4NjVubm0xMWdzd2F2eTVpbGxvdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZVfhlEEGbwuFG/giphy.gif"
+        alt="heart mended">
+    <div class="text-3xl">Happy Valentines Day! 💖</div>
+    <script>
+        const duration = 15 * 1000,
+            animationEnd = Date.now() + duration,
+            defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+        function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        const interval = setInterval(function () {
+            const timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+                return clearInterval(interval);
+            }
+
+            const particleCount = 50 * (timeLeft / duration);
+
+            // since particles fall down, start a bit higher than random
+            confetti(
+                Object.assign({}, defaults, {
+                    particleCount,
+                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                })
+            );
+            confetti(
+                Object.assign({}, defaults, {
+                    particleCount,
+                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                })
+            );
+        }, 250);
+    </script>
+</div>

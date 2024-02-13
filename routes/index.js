@@ -4,7 +4,7 @@ const db = require('../db_context');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: '💖' });
 });
 
 router.get('/what', function(req, res, next) {
@@ -27,7 +27,7 @@ router.get('/because', function(req, res, next) {
   res.render('page-five', { 
     showSmooch: false, 
     mytype: 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExems3Zmc3NXVuY2ViMXd5ZjhtbWxyeG1nbWdrajh6Znp2Y29yOGhzeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26xBHu2fc9Ie8DwyY/giphy.gif',
-    btnText: 'So...',
+    btnText: 'btw, click here for a little something...',
     btnLink: '/smooch'
   });
 });
@@ -37,7 +37,7 @@ router.get('/smooch', function(req, res, next) {
     showSmooch: true, 
     mytype: 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExems3Zmc3NXVuY2ViMXd5ZjhtbWxyeG1nbWdrajh6Znp2Y29yOGhzeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26xBHu2fc9Ie8DwyY/giphy.gif',
     smooch: 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnRvZThnejNrdGtrOXVpd3ljcDk5em96eDRiNjB6eHBvc2hjN3BybyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dybAiWURshO75qYIYs/giphy.gif',
-    btnText: 'aaaaaaaaaaaannnndd....',
+    btnText: 'oh and also...',
     btnLink: '/allthefeels'
   });
 });
@@ -52,6 +52,10 @@ router.get('/perfect', function(req, res, next) {
 
 router.get('/bemyvalentine', function(req, res, next) {
   res.render('page-eight');
+});
+
+router.get('/shesaidyes', function(req, res, next) {
+  res.render('end');
 });
 
 
