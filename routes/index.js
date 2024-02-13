@@ -62,6 +62,17 @@ router.get('/stats', function(req, res, next) {
   res.render('stats');
 })
 
+router.get('/clear', function(req, res, next) {
+  db.run('DELETE FROM user_actions', [], function(err) {
+    if (err) {
+      console.error(err.message);
+      res.render('clear', { message: 'An error occured when clearing' })
+      return;
+    }
+    res.render('clear', { message: 'Entries cleared...' });
+  });
+})
+
 
 // REFERENCE
 router.post('/submit', function(req, res, next) {
