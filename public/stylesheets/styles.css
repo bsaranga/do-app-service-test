@@ -616,6 +616,18 @@ video {
   width: 9rem;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -626,6 +638,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-4 {
@@ -642,6 +658,14 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.gap-24 {
+  gap: 6rem;
 }
 
 .rounded-md {
@@ -712,6 +736,21 @@ video {
 .text-8xl {
   font-size: 6rem;
   line-height: 1;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-white {
