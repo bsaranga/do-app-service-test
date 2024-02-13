@@ -1,4 +1,4 @@
-fetch('/submit', {
+/* fetch('/submit', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -20,4 +20,4 @@ const id = setTimeout(() => {
     });
 
     clearTimeout(id);
-}, 1500);
+}, 1500); */
