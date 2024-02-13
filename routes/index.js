@@ -58,10 +58,14 @@ router.get('/shesaidyes', function(req, res, next) {
   res.render('end');
 });
 
+router.get('/stats', function(req, res, next) {
+  res.render('stats');
+})
+
 
 // REFERENCE
-/* router.post('/submit', function(req, res, next) {
-  console.log("GOT A POST!!!");
+router.post('/submit', function(req, res, next) {
+  console.log('Getting a message...')
   db.run('INSERT INTO user_actions (message) VALUES (?)', [req.body.message], function(err) {
     if (err) {
       console.error(err.message);
@@ -69,7 +73,8 @@ router.get('/shesaidyes', function(req, res, next) {
       return;
     }
   });
-  res.json({message: "You have successfully posted a post!"});
+
+  res.json({message: "Message posted successfully."});
 });
 
 router.get('/entries', function(req, res, next) {
@@ -81,6 +86,6 @@ router.get('/entries', function(req, res, next) {
     }
     res.json(rows);
   });
-}); */
+});
 
 module.exports = router;

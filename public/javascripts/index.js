@@ -1,23 +1,15 @@
-/* fetch('/submit', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        message: 'This is a test request'
-    })
-}).then(res => {
-    res.json().then(data => {
-        console.log(data)
-    })
-});
-
-const id = setTimeout(() => {
-    fetch('/entries').then(res => {
+function postStatusMessage(message) {
+    fetch('/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message: `${new Date()} : ${message}`})
+    }).then(res => {
         res.json().then(data => {
             console.log(data)
         })
+    }).catch(err => {
+        console.error(err)
     });
-
-    clearTimeout(id);
-}, 1500); */
+}

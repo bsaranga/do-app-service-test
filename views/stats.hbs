@@ -1,0 +1,8 @@
+<div>Check console for data...</div>
+<script>
+    fetch('/entries').then(res => {
+        res.json().then(data => {
+            console.log(data)
+        })
+    });
+</script>
