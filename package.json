@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node --watch-path=./ ./bin/www",
+    "debug": "node --watch-path=./ ./bin/www",
+    "start": "node ./bin/www",
     "watch-css": "tailwindcss -i ./index.css -o ./public/stylesheets/styles.css --watch"
   },
   "dependencies": {
